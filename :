@@ -1,0 +1,22 @@
+def count_words(text):
+    return len(text.split(None))
+
+def count_chars(text: str):
+    occurences = {}
+
+    for c in text:
+        c = c.lower()
+
+        if c in occurences:
+            occurences[c] += 1
+        else:
+            occurences[c] = 1
+
+    return occurences
+
+def get_dicts(counts):
+    list = []
+
+    for c in counts:
+        list.append({"char": c, "count": counts[c]})
+
